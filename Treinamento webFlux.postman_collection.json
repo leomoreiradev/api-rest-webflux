@@ -1,0 +1,203 @@
+{
+	"info": {
+		"_postman_id": "7a7758f0-dded-4015-b238-e2ad2430122b",
+		"name": "Treinamento webFlux",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23378242"
+	},
+	"item": [
+		{
+			"name": "listar produtos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/productos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"productos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "pegar produto  por id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/productos/633ed72452df1f51af046352",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"productos",
+						"633ed72452df1f51af046352"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "upload",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/productos/633ed72452df1f51af046352",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"productos",
+						"633ed72452df1f51af046352"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deletar",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/productos/633ed72452df1f51af046352",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"productos",
+						"633ed72452df1f51af046352"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "editar producto",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"nombre\": \"Asus Notebook X\",\r\n        \"precio\": 3000,\r\n        \"categoria\": {\r\n            \"id\": \"633ed34252df1f51af046347\",\r\n            \"nombre\": \"Computación\"\r\n        }\r\n       \r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/productos/633ed34252df1f51af04634c",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"productos",
+						"633ed34252df1f51af04634c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "criar produto",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"nombre\": \"Tv LG\",\r\n        \"precio\": 1000,\r\n        \"categoria\": {\r\n            \"id\": \"633ecd4552df1f51af04630c\",\r\n            \"nombre\": \"Electrónico\"\r\n        }\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/productos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"productos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "criar produto com foto",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/User/Pictures/hp-multifuncional.jpg"
+						},
+						{
+							"key": "nombre",
+							"value": "Impressora HP Multifuncional",
+							"type": "text"
+						},
+						{
+							"key": "precio",
+							"value": "1000",
+							"type": "text"
+						},
+						{
+							"key": "categoria.id",
+							"value": "63431dceb83f9a217e805b95",
+							"type": "text"
+						},
+						{
+							"key": "categoria.nombre",
+							"value": "Computación",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/productos/v2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"productos",
+						"v2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
